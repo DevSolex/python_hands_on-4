@@ -12,3 +12,16 @@ During the first day:
 
 # print(participants_snapshot)
 # print(participants)
+participants = {"VIP": "Alice", "Regular": "Bob", "Student": "Charie"}
+print(participants)
+participants.update({'Guest': 'Daisy'})
+print(participants)
+left = participants.pop('Student')
+print(participants)
+record = {
+"participants": participants,
+"those_that_left": left
+}
+print(record)
+participants.popitem()
+print(participants)

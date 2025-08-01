@@ -23,3 +23,35 @@ At checkout:
 - A snapshot of the nested cart is taken as the order summary for the store record.
 - The shared smart cart is then completely emptied to reset for the next customers.
 """
+
+cart = {
+"phones": {},
+"laptops": {},
+"accessories": {}
+}
+Tobi = Lami = Chinedu = cart
+Tobi['phones'].update({("iphone", 750000)}) 
+print(Tobi)
+Lami['laptops'].update({('Dell XPS', 1200000)})
+print(Lami)
+Chinedu['accessories'].update({('Earbuda', 50000)})
+print(Chinedu)
+Tobi['phones'].pop('iphone')
+print(Tobi)
+Lami['accessories'].update({('Gaming Mouse', 35000)})
+print(Lami)
+snapshot = cart.copy()
+print(snapshot)
+print(hex(id(Tobi)))
+print(hex(id(Lami)))
+print(hex(id(Chinedu)))
+print(hex(id(cart)))
+print(hex(id(snapshot)))
+cart.clear()
+print(cart)
+print(Tobi,Lami,Chinedu)
+
+
+
+
+

@@ -9,3 +9,15 @@ Later in the day:
 - The "Student" category sold out completely.
 - The team wanted to keep a record of the day’s sales before preparing for next week’s concert.
 """
+
+tickets = {"VIP": 50, "Regular": 150, "Student": 75}
+print(tickets)
+tickets.update({'Backstage': 10})
+print(tickets)
+sold_out = tickets.pop("Student")
+print(tickets)
+record = {
+"Avialable": tickets,
+"sold_out": sold_out
+}
+print(record)
